@@ -1,10 +1,11 @@
 /* Global Styling */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style: none;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   text-decoration: none;
 }
 
@@ -14,47 +15,62 @@
   --primary-color1:#2E86C1;
   --lightgrey:#E0E0E0;
   --darkgrey:#333333;
+  --heading-font: 'Montserrat', sans-serif;
+  --body-font:'Open Sans', sans-serif;
 }
 
-/* HEADER STYLING */
+/* HEADER & NAVIGATION STYLING */
 header{
-  background-color: var(--lightgrey)
+  background-color: var(--lightgrey);
+  padding: 0px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--heading-font);
 }
 
-/* Nav Styling */
+header > nav > ul > li {
+  position: relative;
+  float: left;
+}
 
-nav > ul {
-  display:flex;
-  justify-content:space-around;
-  padding:35px;
+header > nav > ul > li > a {
+  padding: 20px;
+  display: block;
+  color: var(--black);
+}
+
+header > nav > ul > li > a:hover{
+  background: var(--primary-color1);
+  color: var(--lightgrey);
 }
 
 #nav-header{
   cursor: pointer;
   text-align: center;
+  font-weight: bolder;
+  font-size: 25px;
+  color:var(--black);
+  font-family: var(--heading-font);
+  margin-left: -12px;
 }
 
-nav > ul > li > h2 > span{
+header > a > h2 > span{
   color:var(--primary-color1)
-}
-
-nav > ul > li > a{
-  color: var(--black);
-  text-transform: capitalize;
-}
-
-nav > ul > li > a:hover{
-  color: var(--primary-color1);
-
 }
 
 .cta-button{
   background-color: var(--primary-color1);
+  font-family: var(--heading-font);
   padding: 9px 30px;
   border-radius: 50px;
   color: var(--white);
   border-style: none;
   border-color: var(--black);
+  text-align: center;
+  margin-top: 12px;
+  align-self: left;
+  margin-left: 12px;
 }
 
 .cta-button:hover{
