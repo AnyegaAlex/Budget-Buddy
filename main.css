@@ -9,9 +9,6 @@
   text-decoration: none;
 }
 
-a{
-  color: var(--black);
-}
 
 :root{
   --white:#FFFFFF;
@@ -41,6 +38,7 @@ header > nav > ul > li {
 header > nav > ul > li > a {
   padding: 20px;
   display: block;
+  color: var(--black);
 }
 
 header > nav > ul > li > a:hover{
@@ -60,6 +58,14 @@ header .navbar > ul > li > ul > li {
   width:100%;
   border-top: 1px solid rgba(0,0,0,.1);
   padding: 18px;
+}
+header .navbar > ul > li > ul > li  > a {
+  color: var(--black);
+}
+
+header .navbar > ul > li > ul > li:hover{
+  background: var(--primary-color1);
+  color: var(--white);
 }
 
 header .navbar > ul > li > ul > li > ul {
@@ -104,3 +110,4 @@ header > a > h2 > span{
   background-color: var(--black);
   transform: scale(1.2);
 }
+
