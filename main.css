@@ -74,7 +74,7 @@ header > a > h2 > span{
 }
 
 .cta-button:hover{
-  color: var(--primary-color1 );
+  color: var(--lightgrey );
   background-color: var(--black);
   transform: scale(1.2);
 }
