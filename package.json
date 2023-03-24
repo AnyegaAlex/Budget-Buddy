@@ -1,0 +1,22 @@
+{
+  "name": "budgetbuddy",
+  "version": "1.0.0",
+  "description": "An app that combines cutting-edge technology with expert financial guidance. Resulting to a powerful yet user-friendly budgeting app that helps users track their expenses, set financial goals, and make informed decisions about their money.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnyegaAlex/Budget-Buddy.git"
+  },
+  "author": "Alex-Anyega anyega.alex.kamau@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnyegaAlex/Budget-Buddy/issues"
+  },
+  "homepage": "https://github.com/AnyegaAlex/Budget-Buddy#readme",
+  "dependencies": {
+    "chart.js": "^4.2.1"
+  }
+}

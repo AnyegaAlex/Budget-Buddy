@@ -108,6 +108,7 @@ header > nav > ul > li > a {
 header > nav > ul > li > a:hover{
   background: var(--primary-color1);
   color: var(--lightgrey);
+  transition: all 0.3s ease 0s; /* smooth transition */
 }
 
 header .navbar > ul > li > ul{
@@ -130,6 +131,7 @@ header .navbar > ul > li > ul > li  > a {
 header .navbar > ul > li > ul > li:hover{
   background: var(--primary-color1);
   color: var(--white);
+  transition: all 0.3s ease 0s; /* smooth transition */
 }
 
 header .navbar > ul > li > ul > li > ul {
@@ -139,6 +141,7 @@ header .navbar > ul > li > ul > li > ul {
 
 header .navbar > ul > li:hover > ul{
   display: initial;
+  transition: all 0.3s ease 0s; /* smooth transition */
 }
 
 #nav-header{
@@ -173,5 +176,10 @@ header > a > h2 > span{
   color: var(--lightgrey );
   background-color: var(--black);
   transform: scale(1.1);
+  transition: all 0.3s ease 0s; /* smooth transition */
 }
+
+/* ADD RESPONSIVE NAVBAR */
+
+
 
