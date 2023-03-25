@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href = "main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css"/>
+  <link rel="stylesheet" href = "assets/css/main.css">
   <title>Budget Buddy - Your Finance Companion </title>
 </head>
 <body>
@@ -14,23 +15,72 @@
       <ul>
         <li><a href="#">About Us</a></li>
         <li><a href="#">Expense Tracking +</a>
-        <ul>
-          <li><a href="#">Budgeting Recommendations</a>
-        </ul>
+        <!-- <ul> -->
+          <!-- <li><a href="#">Budgeting Recommendations</a> -->
+        <!-- </ul> -->
         </li>
         <li><a href="#">Income Tracking +</a>
-          <ul>
-            <li><a href="#">Goal-based Saving</a> 
-            <li><a href="#">Financial Advice</a> 
-          </ul>
+          <!-- <ul> -->
+            <!-- <li><a href="#">Goal-based Saving</a>  -->
+            <!-- <li><a href="#">Financial Advice</a>  -->
+          <!-- </ul> -->
         </li>
         <li><a href="#">Help/Support</a></li>
         <li><button class="cta-button" onclick="signUp()">Login/Sign Up</button></a></li>
       </ul>
     </nav>
   </header>
-  <main></main>
-  <footer></footer>
-  <script src="main.js"></script>
+  <main>
+    <div id="flex-container">
+      <div id="landing-page-cta-text">
+        <h2>Get in control of your finances today using Budget <span> Buddy</span></h2>
+        <p>An app that combines cutting-edge technology with expert financial guidance that helps users track their expenses, set financial goals, and make informed decisions about their money</p>
+        <button class="cta-button" onclick="signUp()">Login/Sign Up</button>
+      </div>
+      <div id="donut-chart-illustration">
+        <h3>Expense Tracking</h3>
+        <canvas id="donutChart" width="50" height="50"></canvas>
+        </div>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    var ctx = document.getElementById("donutChart");
+    var donutChart = new Chart ( ctx, {
+      type: 'doughnut',
+        data: {
+          labels: ['Food', 'Social Life', 'Bills', 'Water', 'Electricity', 'Loan'],
+          datasets: [{
+            label: 'Expense Tracking',
+            data: [1200, 1900, 5000, 700, 250, 3000],
+            backgroundColor:[
+              'rgba (255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)',
+              'rgba(153, 102, 255, 1)',
+              'rgba(255, 159, 64, 1)'
+            ],
+          
+            borderColor:[
+              'rgba (255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)',
+              'rgba(153, 102, 255, 1)'
+            ],
+            borderWidth:1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+    });
+  </script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

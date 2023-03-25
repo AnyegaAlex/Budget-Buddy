@@ -78,6 +78,7 @@ svg {
   --darkgrey:#333333;
   --heading-font: 'Montserrat', sans-serif;
   --body-font:'Open Sans', sans-serif;
+  --fw-thin:300;
   --fw-regular: 400;
   --fw-semi-bold: 500;
   --fw-bold: 700;
@@ -92,6 +93,7 @@ header{
   align-items: center;
   justify-content: space-between;
   font-family: var(--heading-font);
+  position: relative;
 }
 
 header > nav > ul > li {
@@ -179,7 +181,68 @@ header > a > h2 > span{
   transition: all 0.3s ease 0s; /* smooth transition */
 }
 
-/* ADD RESPONSIVE NAVBAR */
+/* LANDING PAGE STYLING */
+
+#flex-container{
+  height:90vh;
+  position: relative;
+  color: var(--black);
+  background: var(--lightgrey);
+}
+
+#landing-page-cta-text{
+  padding: 6px;
+  max-width: 50%;
+  position: absolute;
+  left:6%;
+  bottom: 32%;
+}
+
+#flex-container > #landing-page-cta-text > button{
+  margin-left: auto;
+  margin-top: 7px;
+}
 
 
+#flex-container > #landing-page-cta-text > h2 > span{
+  color:var(--primary-color1)
+}
 
+#flex-container > #landing-page-cta-text > h2 {
+   font-family: var(--heading-font);
+   font-weight: var(--fw-bold);
+   font-size: 30px;
+   line-height: 1.2;
+   padding-bottom: 4px;
+}
+
+#flex-container > #landing-page-cta-text > p{
+  font-family: var(--body-font);
+  font-weight: var(--fw-regular);
+  font-size: smaller;
+  padding: 5px;
+  line-height: 2;
+}
+
+#landing-page-cta-text{
+  justify-self: flex-start;
+  align-self: baseline;
+}
+
+#donut-chart-illustration {
+  float: right;
+  bottom: 40%;
+  width: 33%;
+  height: 75%;
+  margin-top: 35px;
+  margin-right:85px;
+  padding: 6px;
+}
+
+#donut-chart-illustration > h3 {
+  font-family: var(--heading-font);
+  font-weight: 200;
+  color: var(--darkgrey);
+  text-align: center;
+  padding: 1px;
+}
