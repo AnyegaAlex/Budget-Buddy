@@ -183,7 +183,7 @@ header > a > h2 > span{
 
 /* LANDING PAGE STYLING */
 
-#flex-container{
+#main-container{
   height:90vh;
   position: relative;
   color: var(--black);
@@ -198,17 +198,17 @@ header > a > h2 > span{
   bottom: 32%;
 }
 
-#flex-container > #landing-page-cta-text > button{
+#main-container > #landing-page-cta-text > button{
   margin-left: auto;
   margin-top: 7px;
 }
 
 
-#flex-container > #landing-page-cta-text > h2 > span{
+#main-container > #landing-page-cta-text > h2 > span{
   color:var(--primary-color1)
 }
 
-#flex-container > #landing-page-cta-text > h2 {
+#main-container > #landing-page-cta-text > h2 {
    font-family: var(--heading-font);
    font-weight: var(--fw-bold);
    font-size: 30px;
@@ -216,7 +216,7 @@ header > a > h2 > span{
    padding-bottom: 4px;
 }
 
-#flex-container > #landing-page-cta-text > p{
+#main-container > #landing-page-cta-text > p{
   font-family: var(--body-font);
   font-weight: var(--fw-regular);
   font-size: smaller;
