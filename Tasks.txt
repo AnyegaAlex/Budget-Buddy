@@ -1,0 +1,24 @@
+Remove the chart background
+Fix the cta-button on the landing page: - center? -
+Fix the colors on the chart to match the theme
+Add a padding on the top of the navbar -
+Add relevant categories to the expense tracking donut chart
+Add a thin line on the botton navbar -
+Fix the cta-text grammarticaly -
+Add a favicon -
+border shadow on chart
+border on right grid
+
+add a halfcircle svg transitioning to the about section which will have two divs one thats blue and one that continues with the general color theme
+in the blue area add image of me and describe why i started this project social icons : the other gray section will have about us text. 
+expense tracing should have the following: input field to enter salary
+button for tracking = output is a display of how the should save the moey entered
+add graphs or a speed dial
+incoome=expese
+help/support page design?
+scroll down from home to about - scroll down to the left to expenses page then sroll to the right for the income page
+scroll down for the help
+design log in page.
+expenses page should incoperate red to the desig blobs be creative
+beautiful buttons and animations
+add hover background to the chart of landing page  
