@@ -209,6 +209,7 @@ header > a > h2 > span{
   position: absolute;
   left:6%;
   bottom: 32%;
+
 }
 
 #main-container > #landing-page-cta-text > #cta-button-landing-page > button {
@@ -284,10 +285,17 @@ header > a > h2 > span{
   bottom: 40%;
   width: 33%;
   height: 75%;
-  margin-top: 35px;
+  margin-top: 55px;
   margin-right:85px;
-  padding: 6px;
-
+  padding: 35px;
+  box-shadow:
+  0px 0px 2.2px rgba(0, 0, 0, 0.02),
+  0px 0px 5.3px rgba(0, 0, 0, 0.028),
+  0px 0px 10px rgba(0, 0, 0, 0.035),
+  0px 0px 17.9px rgba(0, 0, 0, 0.042),
+  0px 0px 33.4px rgba(0, 0, 0, 0.05),
+  0px 0px 80px rgba(0, 0, 0, 0.07);
+  border-radius: 50px;
 }
 
 #donut-chart-illustration > h3 {
