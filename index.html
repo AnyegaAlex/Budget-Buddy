@@ -46,6 +46,17 @@
   </main>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script>
+    const chartAreaBorder ={
+      id:'chartAreaBorder',
+      afterDatasetsDraw(chart, args, options){
+        const {ctx, chartArea: {top, bottom, left, right, width, height}} = chart;
+        ctx.save();
+        ctx.fillStyle = options.borderColor;
+        ctx.strokeRect(right-2, top, 0 , height);
+        ctx.restore();
+      }
+    };
+
     var ctx = document.getElementById("donutChart");
     var donutChart = new Chart ( ctx, {
       type: 'doughnut',
@@ -76,10 +87,24 @@
         options: {
           scales: {
             y: {
-              beginAtZero: true
+              beginAtZero: true,
+              ticks:{
+                display:false
+              },
+              grid:{
+                drawTicks: false,
+                drawBorder:false
+              }
+
+            }
+          },
+          plugins:{
+            chartAreaBorder:{
+              borderColor:'green'
             }
           }
-        }
+        },
+        plugins:[chartAreaBorder]
     });
   </script>
   <script src="assets/js/main.js"></script>
