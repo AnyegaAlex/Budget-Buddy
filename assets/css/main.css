@@ -82,18 +82,30 @@ svg {
   --fw-regular: 400;
   --fw-semi-bold: 500;
   --fw-bold: 700;
+  --olivine:#ABC270;
+  --verdigris:#3EB4B6;
+  --butterscotch:#E0943E;
+  --smokyblack:#110D03;
+  --steelblue:#2B7EB6;
+  --gunmetal:#2D3142;
+  --rufous:#A31B14;
+  --timberwolf:#DAD2D8;
+  --silver:#ADADAD;
+  --salmonpink:#F29CA3;
+
 }
 
 
 /* HEADER & NAVIGATION STYLING */
 header{
   background-color: var(--lightgrey);
-  padding: 0px 7%;
+  padding: 3px 7%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-family: var(--heading-font);
   position: relative;
+  border-bottom: 1px solid rgba(0,0,0,.1);
 }
 
 header > nav > ul > li {
