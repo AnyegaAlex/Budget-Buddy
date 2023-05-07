@@ -2,6 +2,7 @@
 An app that combines cutting-edge technology with expert financial guidance. Resulting to a powerful yet user-friendly budgeting app that helps users track their expenses, set financial goals, and make informed decisions about their money.
 
 #### Note: This project is currently under construction and only the landing page of the desktop version is available
+![image](https://user-images.githubusercontent.com/125030478/236678078-2df62f8e-24e0-4a8e-a2ee-b454f1c18b93.png)
 
 ## About Budget Buddy
 Budget Buddy is a budgeting app founded in 2023 by me { Alex }, a personal finance enthusiast who saw a need for a tool that could help people manage their finances more effectively. With the help of our team of experts in finance and technology, we are creating an innovative budgeting app that leverages the power of AI to provide personalized insights and recommendations to our users.
