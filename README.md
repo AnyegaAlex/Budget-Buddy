@@ -1,4 +1,5 @@
 # Budget-Buddy
+## https://budget-buddy-360.netlify.app/
 An app that combines cutting-edge technology with expert financial guidance. Resulting to a powerful yet user-friendly budgeting app that helps users track their expenses, set financial goals, and make informed decisions about their money.
 
 #### Note: This project is currently under construction and only the landing page of the desktop version is available
