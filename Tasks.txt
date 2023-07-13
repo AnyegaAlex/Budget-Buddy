@@ -22,3 +22,5 @@ design log in page.
 expenses page should incoperate red to the desig blobs be creative
 beautiful buttons and animations
 add hover background to the chart of landing page  
+
+animate__fadeInLeft

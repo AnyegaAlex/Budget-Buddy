@@ -1,0 +1,19 @@
+@keyframes slideInLeft {
+  from{
+    transform: translateX(-300px);
+  }
+
+  to{
+    transform: translateX(0);
+  }
+}
+
+.brand-intro{
+  animation-name:slideInLeft ; /*select key frame*/
+  animation-duration: 1s; /*sets the animation duration - time to complete one lap */
+  animation-timing-function: ease-in ;
+  animation-delay: 0s;/*sets delay before running the animation*/
+  animation-iteration-count: 1; /*how many times you want the animation to run */
+  animation-direction: normal ; /*sets whether the nimation will run normally or in reverse */
+  animation-fill-mode:none ; 
+}

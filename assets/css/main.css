@@ -92,6 +92,10 @@ svg {
   --timberwolf:#DAD2D8;
   --silver:#ADADAD;
   --salmonpink:#F29CA3;
+  --accent-color-1:#1A5276;
+  --accent-color-2:#6BB1C1;
+  --money:rgba(32, 71, 11);
+
 
 }
 
@@ -317,4 +321,15 @@ Education expenses (tuition, books, school supplies)
 Debt payments (credit cards, loans, etc.)
 Savings and investments
 Miscellaneous expenses (gifts, charity donations, subscriptions, etc.)
+*/
+
+/* ABOUT US SECTION CODE */
+/* 
+background: rgba(46,134,193,0.4);
+-webkit-backdrop-filter: blur(5px);
+backdrop-filter: blur(5px);
+border: 1px solid rgba(46,134,193,0.2);
+*/
+/* 
+--PRIMARYCOLOE;rgb(46, 134, 193)
 */
