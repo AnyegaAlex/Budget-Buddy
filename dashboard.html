@@ -1,0 +1,254 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Dashboard | Budget Buddy</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body>
+  <!-- Dashboard Header -->
+  <header class="dashboard-header">
+    <div class="container">
+      <div class="logo">
+        <i class="fas fa-piggy-bank"></i>
+        <h1>Budget<span>Buddy</span></h1>
+      </div>
+      <div class="user-menu">
+        <div class="user-avatar">
+          <img src="assets/images/user-avatar.jpg" alt="User Avatar">
+          <span>Hi, User!</span>
+        </div>
+        <button class="btn btn-icon">
+          <i class="fas fa-bell"></i>
+        </button>
+        <button class="btn btn-icon">
+          <i class="fas fa-cog"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Dashboard Main Content -->
+  <main class="dashboard-container">
+    <!-- Sidebar Navigation -->
+    <aside class="dashboard-sidebar">
+      <nav>
+        <ul>
+          <li class="active">
+            <a href="#">
+              <i class="fas fa-home"></i>
+              <span>Overview</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-wallet"></i>
+              <span>Accounts</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-chart-pie"></i>
+              <span>Budget</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-bullseye"></i>
+              <span>Goals</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-exchange-alt"></i>
+              <span>Transactions</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-chart-line"></i>
+              <span>Reports</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-robot"></i>
+              <span>AI Assistant</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="dashboard-content">
+      <!-- Financial Overview -->
+      <section class="financial-overview">
+        <div class="overview-cards">
+          <div class="overview-card">
+            <h3>Total Balance</h3>
+            <p class="amount">$12,456.78</p>
+            <p class="change positive">+2.4% from last month</p>
+          </div>
+          <div class="overview-card">
+            <h3>Monthly Income</h3>
+            <p class="amount">$4,500.00</p>
+            <p class="change positive">+5% from last month</p>
+          </div>
+          <div class="overview-card">
+            <h3>Monthly Expenses</h3>
+            <p class="amount">$3,200.50</p>
+            <p class="change negative">-3.2% from last month</p>
+          </div>
+          <div class="overview-card">
+            <h3>Monthly Savings</h3>
+            <p class="amount">$1,299.50</p>
+            <p class="change positive">+12.1% from last month</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Budget & Spending Section -->
+      <section class="budget-section">
+        <div class="section-header">
+          <h2>Budget & Spending</h2>
+          <button class="btn btn-outline">View Details</button>
+        </div>
+        
+        <div class="budget-grid">
+          <div class="budget-chart">
+            <canvas id="budgetChart"></canvas>
+          </div>
+          <div class="spending-breakdown">
+            <h3>Spending Breakdown</h3>
+            <ul class="category-list">
+              <li>
+                <span class="category-name">Housing</span>
+                <span class="category-amount">$1,200</span>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 40%; background-color: #4361ee;"></div>
+                </div>
+              </li>
+              <li>
+                <span class="category-name">Food</span>
+                <span class="category-amount">$600</span>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 20%; background-color: #4895ef;"></div>
+                </div>
+              </li>
+              <li>
+                <span class="category-name">Transportation</span>
+                <span class="category-amount">$400</span>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 15%; background-color: #4cc9f0;"></div>
+                </div>
+              </li>
+              <li>
+                <span class="category-name">Entertainment</span>
+                <span class="category-amount">$300</span>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 10%; background-color: #f72585;"></div>
+                </div>
+              </li>
+              <li>
+                <span class="category-name">Utilities</span>
+                <span class="category-amount">$250</span>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 8%; background-color: #7209b7;"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recent Transactions -->
+      <section class="transactions-section">
+        <div class="section-header">
+          <h2>Recent Transactions</h2>
+          <button class="btn btn-outline">View All</button>
+        </div>
+        
+        <div class="transactions-list">
+          <div class="transaction">
+            <div class="transaction-icon">
+              <i class="fas fa-shopping-bag"></i>
+            </div>
+            <div class="transaction-details">
+              <h3>Grocery Store</h3>
+              <p>Today, 3:45 PM</p>
+            </div>
+            <div class="transaction-amount negative">
+              -$86.75
+            </div>
+          </div>
+          
+          <div class="transaction">
+            <div class="transaction-icon">
+              <i class="fas fa-home"></i>
+            </div>
+            <div class="transaction-details">
+              <h3>Rent Payment</h3>
+              <p>Yesterday</p>
+            </div>
+            <div class="transaction-amount negative">
+              -$1,200.00
+            </div>
+          </div>
+          
+          <div class="transaction">
+            <div class="transaction-icon">
+              <i class="fas fa-dollar-sign"></i>
+            </div>
+            <div class="transaction-details">
+              <h3>Paycheck</h3>
+              <p>May 1, 2023</p>
+            </div>
+            <div class="transaction-amount positive">
+              +$2,500.00
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AI Recommendations -->
+      <section class="ai-recommendations">
+        <div class="section-header">
+          <h2>AI Recommendations</h2>
+          <button class="btn btn-outline">Ask Buddy</button>
+        </div>
+        
+        <div class="recommendation-cards">
+          <div class="recommendation-card">
+            <div class="recommendation-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <div class="recommendation-content">
+              <h3>Reduce Dining Out</h3>
+              <p>You've spent $320 on restaurants this month. Consider meal prepping to save ~$150/month.</p>
+              <button class="btn btn-sm">View Plan</button>
+            </div>
+          </div>
+          
+          <div class="recommendation-card">
+            <div class="recommendation-icon">
+              <i class="fas fa-piggy-bank"></i>
+            </div>
+            <div class="recommendation-content">
+              <h3>Emergency Fund</h3>
+              <p>You're 60% to your $5,000 goal. Increase monthly savings by $100 to reach it 2 months faster.</p>
+              <button class="btn btn-sm">Adjust Goal</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

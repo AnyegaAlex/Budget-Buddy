@@ -2,119 +2,257 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css"/>
-  <link rel="icon" type="image/x-icon" href="/assets/Budget Buddy Favicon/apple-touch-icon.png">
-  <link rel="stylesheet" href = "assets/css/main.css">
-  <link rel="stylesheet" href="assets/css/animation.css">
-  <title>Budget Buddy - Your Finance Companion </title>
+  <title>Budget Buddy - AI-Powered Finance Companion</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    if (localStorage.getItem('budgetBuddyAuth') === 'true') {
+      window.location.href = 'dashboard.html';
+    }
+  });
+</script>
 </head>
 <body>
-  <header>
-    <a href="#"><h2 id="nav-header">Budget <span>Buddy</span></h2></a>
-    <nav class="navbar">
-      <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Expense Tracking +</a>
-        <!-- <ul> -->
-          <!-- <li><a href="#">Budgeting Recommendations</a> -->
-        <!-- </ul> -->
-        </li>
-        <li><a href="#">Income Tracking +</a>
-          <!-- <ul> -->
-            <!-- <li><a href="#">Goal-based Saving</a>  -->
-            <!-- <li><a href="#">Financial Advice</a>  -->
-          <!-- </ul> -->
-        </li>
-        <li><a href="#">Help/Support</a></li>
-        <li><button class="cta-button" onclick="signUp()">Login/Sign Up</button></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <div id="main-container">
-      <div id="landing-page-cta-text">
-        <h2 class="brand-intro">Get in control of your finances today using Budget <span> Buddy</span></h2>
-        <p>An app that combines cutting-edge technology with expert financial guidance to help users track their expenses, set financial goals, and make informed decisions about their money.</p>
-        <div id="cta-button-landing-page"><button class="cta-button"  onclick="signUp()">Login/Sign Up</button></div>
+  <!-- Header/Navigation -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <i class="fas fa-piggy-bank"></i>
+        <h1>Budget<span>Buddy</span></h1>
       </div>
-      <div id="donut-chart-illustration">
-        <h3>Expense Tracking</h3>
-        <canvas id="donutChart" width="50" height="50"></canvas>
-        </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="btn btn-primary" onclick="window.location.href='signup.html'">Get Started</button>
+      </nav>
+      <button class="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
-  </main>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script>
-    // Comented out code adds a border to the donught chart
-    // const chartAreaBorder ={
-      // id:'chartAreaBorder',
-      // afterDatasetsDraw(chart, args, options){
-        // // const {ctx, chartArea: {top, bottom, left, right, width, height}} = chart;
-        // ctx.save();
-        // ctx.fillStyle = options.borderColor;
-        // ctx.strokeRect(left-2, bottom, 0 , width);
-        // ctx.restore();
-      // }
-    // };
+  </header>
 
-    var ctx = document.getElementById("donutChart");
-    var donutChart = new Chart ( ctx, {
-      type: 'doughnut',
-        data: {
-          labels: ['Housing', 'Transportation', 'Food', 'Entertainment', 'Personal care', 'Savings'],
-          datasets: [{
-            label: 'Expense Tracking',
-            data: [1200, 1900, 5000, 700, 250, 3000],
-            backgroundColor:[
-              'rgba (355, 99, 132, 0.1)',
-              'rgba(54, 162, 235, 1)',
-              'rgba(255, 206, 86, 1)',
-              'rgba(75, 192, 192, 1)',
-              'rgba(153, 102, 255, 1)',
-              'rgba(255, 159, 64, 1)'
-            ],
-          
-            borderColor:[
-              'rgba (255, 99, 132, 1)',
-              'rgba(54, 162, 235, 1)',
-              'rgba(255, 206, 86, 1)',
-              'rgba(75, 192, 192, 1)',
-              'rgba(153, 102, 255, 1)'
-            ],
-            borderWidth:1
-          }]
-        },
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              ticks:{
-                display:false
-              },
-              grid:{
-                drawTicks: false,
-                drawBorder:false
-              }
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Take Control of Your Finances with AI</h1>
+        <p>Budget Buddy combines cutting-edge technology with expert financial guidance to help you achieve your money goals.</p>
+        <div class="cta-buttons">
+          <button class="btn btn-primary" onclick="window.location.href='signup.html'">
+            <i class="fas fa-rocket"></i> Start Free Trial
+          </button>
+          <button class="btn btn-outline">
+            <i class="fas fa-play"></i> Watch Demo
+          </button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="assets/images/app-preview.png" alt="Budget Buddy App Preview">
+      </div>
+    </div>
+  </section>
 
-            }
-            // use code to remove gridlines
-            // x:{
-              // ticks:{
-                // display:false
-              // }
-            // }
-          }
-          // plugins:{
-            // chartAreaBorder:{
-              // borderColor:'green'
-            // }
-          // }
-        }
-        // plugins:[chartAreaBorder]
-    });
-  </script>
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <div class="container">
+      <h2 class="section-title">Key Features</h2>
+      <p class="section-subtitle">AI-powered tools to transform your financial life</p>
+      
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3>Smart Insights</h3>
+          <p>AI analyzes your spending habits and provides personalized recommendations to save money and reach goals faster.</p>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3>Goal Tracker</h3>
+          <p>Set financial targets, track progress, and get reminders to keep you motivated and accountable.</p>
+        </div>
+        
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3>Virtual Assistant</h3>
+          <p>24/7 AI chatbot answers questions, provides advice, and helps you navigate the app effortlessly.</p>
+        </div>
+        
+        <!-- Feature 4 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-tags"></i>
+          </div>
+          <h3>Custom Categories</h3>
+          <p>Create personalized spending categories with AI suggestions based on your unique financial patterns.</p>
+        </div>
+        
+        <!-- Feature 5 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Spending Trends</h3>
+          <p>Visualize your financial habits over time with interactive charts and actionable insights.</p>
+        </div>
+        
+        <!-- Feature 6 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-calculator"></i>
+          </div>
+          <h3>Smart Budgeting</h3>
+          <p>AI creates and adjusts personalized budgets based on your income, expenses, and financial goals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="how-it-works" class="how-it-works">
+    <div class="container">
+      <h2 class="section-title">How Budget Buddy Works</h2>
+      <p class="section-subtitle">Get started in just 3 simple steps</p>
+      
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Connect Your Accounts</h3>
+          <p>Securely link your bank, credit cards, and investment accounts (256-bit encryption).</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Set Your Goals</h3>
+          <p>Tell us what you want to achieve - saving, debt reduction, or smart investing.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Get AI Insights</h3>
+          <p>Receive personalized recommendations and watch your financial health improve.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <h2 class="section-title">What Our Users Say</h2>
+      <p class="section-subtitle">Join thousands who transformed their finances</p>
+      
+      <div class="testimonial-carousel">
+        <div class="testimonial">
+          <div class="quote">
+            <i class="fas fa-quote-left"></i>
+            <p>Budget Buddy helped me save $5,000 in 6 months without feeling deprived. The AI suggestions were spot on!</p>
+          </div>
+          <div class="user">
+            <img src="assets/images/user1.jpg" alt="Sarah J.">
+            <div class="user-info">
+              <h4>Sarah J.</h4>
+              <p>Teacher, 32</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial">
+          <div class="quote">
+            <i class="fas fa-quote-left"></i>
+            <p>I paid off $12,000 in credit card debt using the smart budgeting tools. Life-changing!</p>
+          </div>
+          <div class="user">
+            <img src="assets/images/user2.jpg" alt="Michael T.">
+            <div class="user-info">
+              <h4>Michael T.</h4>
+              <p>Freelancer, 28</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <h2>Ready to Transform Your Finances?</h2>
+      <p>Join Budget Buddy today and take the first step toward financial freedom.</p>
+      <button class="btn btn-primary btn-large" onclick="window.location.href='signup.html'">
+        <i class="fas fa-lock"></i> Get Started - It's Free
+      </button>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-about">
+          <div class="logo">
+            <i class="fas fa-piggy-bank"></i>
+            <h3>Budget<span>Buddy</span></h3>
+          </div>
+          <p>AI-powered financial guidance to help you achieve your money goals with confidence.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2023 Budget Buddy. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
   <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,128 @@
+# Budget Buddy .gitignore
+
+# Node.js dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.production
+
+# Build directories
+dist/
+build/
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE and editor files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# MacOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Python cache and virtual environment
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# Django stuff
+*.log
+*.pot
+*.pyc
+local_settings.py
+db.sqlite3
+media/
+
+# Database files
+*.db
+*.sqlite
+
+# Testing
+coverage/
+.nyc_output/
+
+# Production
+.cache/
+
+# Debug
+dump.rdb
+
+# Backend specific
+celerybeat-schedule
+celerybeat.pid
+*.pid
+*.egg-info/
+*.egg
+
+# Frontend specific
+.sass-cache/
+.tmp/
+.assets/
+/assets/js/chunk-*
+*.css.map
+*.js.map
+
+# Parcel bundler
+.cache/
+.parcel-cache/
+
+# Next.js
+.next/
+
+# Nuxt.js
+.nuxt/
+
+# Quasar
+.quasar/
+
+# Serverless
+.serverless/
+
+# Firebase
+.firebase/
+
+# Debug
+debug.log
+
+# Local development
+*.local
+
+# Logs
+logs/
+*.log
+
+# System Files
+*.swp
+*.swo
+*~
+
+# Python
+*.pyc
+*.pyo
+*.pyd
