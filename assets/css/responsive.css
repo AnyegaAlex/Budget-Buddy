@@ -73,7 +73,21 @@
   .feature-card {
     padding: var(--space-lg);
   }
+
+  .hero-image {
+    margin: 2rem auto 0;
+    max-width: 300px;
+  }
+  
+  .hero-image img {
+    transform: none; /* Remove 3D effect on mobile */
+  }
+  
+  .hero-image::before {
+    display: none;
+  }
 }
+
 
 @media (max-width: 480px) {
   .cta-buttons {
