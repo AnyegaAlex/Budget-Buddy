@@ -268,22 +268,13 @@ p {
 .hero-image img {
   max-width: 100%;
   height: auto;
-  border-radius: 20px;
-  box-shadow: 
-    0 10px 25px rgba(0, 0, 0, 0.1),
-    0 0 0 1px rgba(255, 255, 255, 0.1) inset;
-  border: 1px solid rgba(255, 255, 255, 0.2);
   transform: perspective(1000px) rotateY(-10deg) rotateX(5deg);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
-  background: linear-gradient(145deg, #f8f9fa, #e9ecef);
 }
 
 /* Add a subtle floating effect on hover */
 .hero-image:hover img {
   transform: perspective(1000px) rotateY(-5deg) rotateX(2deg) translateY(-5px);
-  box-shadow: 
-    0 15px 35px rgba(0, 0, 0, 0.15),
-    0 0 0 1px rgba(255, 255, 255, 0.2) inset;
 }
 
 /* Add a decorative pseudo-element */
@@ -292,12 +283,37 @@ p {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #4361ee20, #4cc9f020);
-  border-radius: 20px;
   z-index: -1;
   top: 15px;
   left: 15px;
 }
+
+/* Device Mockup Container */
+.device-mockup {
+  position: relative;
+  width: 400px; /* Adjust based on your image aspect ratio */
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Screen Content */
+.screen-content {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Optional: Add iPhone frame */
+.device-mockup::before {
+  content: "";
+  position: absolute;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 600"><rect x="10" y="20" width="280" height="560" rx="30" fill="none" stroke="black" stroke-width="2"/></svg>') no-repeat center;
+  background-size: contain;
+  pointer-events: none;
+  z-index: 2;
+}
+
 
 /* ====== Features Section ====== */
 .features {
